@@ -30,5 +30,14 @@ namespace LevenshteinDistance
             int disctance = distanceCalculator.Calculate("a", "ab");
             Check.That(disctance).IsEqualTo(1);
         }
+        
+        [TestMethod]
+        [Ignore]
+        public void Should_return_two_when_calculating_distance_with_different_words()
+        {
+            LevenshteinDistanceCalculator distanceCalculator = new LevenshteinDistanceCalculator();
+            int disctance = distanceCalculator.Calculate("a", "bc");
+            Check.That(disctance).IsEqualTo(2);
+        }
     }
 }
